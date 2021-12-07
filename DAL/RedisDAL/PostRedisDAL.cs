@@ -29,7 +29,7 @@ namespace DAL
                 new HashEntry("userid",post.UserId),
                 new HashEntry("title",post.Title),
                 new HashEntry("body",post.Body),
-                new HashEntry("likes",post.LikesPost),
+                new HashEntry("likes",post.LikesPost.ToString()),
                 new HashEntry("createdtime",post.CreatedTime.ToString("o"))
             };
 
@@ -48,22 +48,22 @@ namespace DAL
             var post = new PostRedis { PostId = postId};
             foreach (var item in hashE)
             {
-                switch(item.Name)
+                switch(item.Name.ToString())
                 {
                     case "userid":
-                        post.UserId = item.Value;
+                        post.UserId = item.Value.ToString();
                         break;
                     case "title":
-                        post.Title = item.Value;
+                        post.Title = item.Value.ToString();
                         break;
                     case "body":
-                        post.UserId = item.Value;
+                        post.Body = item.Value.ToString();
                         break;
                     case "likes":
-                        post.Title = item.Value;
+                        post.LikesPost = Convert.ToInt32(item.Value);
                         break;
                     case "crestedtime":
-                        post.UserId = item.Value;
+                        post.CreatedTime = Convert.ToDateTime(item.Value);
                         break;
                     default:
                         break;
