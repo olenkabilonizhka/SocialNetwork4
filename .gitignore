@@ -1,0 +1,17 @@
+.vs/
+BLL/bin/
+BLL/obj/
+BLL/Properties/
+DAL/bin/
+DAL/obj/
+DAL/Core/
+DAL/Properties/
+DAL/libmongocrypt.dylib
+DAL/libmongocrypt.so
+DAL/mongocrypt.dll
+DTO/bin/
+DTO/obj/
+DTO/Properties/
+SocialNetwork/bin/
+SocialNetwork/obj/
+SocialNetwork/Properties/
